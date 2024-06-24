@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    
+ 
     <style>
         .content {
             display: none;
@@ -138,23 +137,23 @@ Nếu bạn có bất kỳ câu hỏi hoặc đề xuất nào về Chính sách
     </div>
     
     <script>
-        // Hàm để kiểm tra ngôn ngữ của người dùng
+       
         function checkUserLanguage() {
-            // Lấy danh sách các ngôn ngữ ưu tiên của người dùng
+          
             const userLanguages = navigator.languages || [navigator.language || navigator.userLanguage];
             
-            // Kiểm tra ngôn ngữ đầu tiên trong danh sách
+          
             const userLanguage = userLanguages[0];
             
-            // Kiểm tra xem người dùng có chọn tiếng Việt hay không
+         
             if (userLanguage.toLowerCase().startsWith('vi')) {
                 document.getElementById('content-vi').style.display = 'block';
             } else {
-                  document.getElementById('content-vn').style.display = 'block';
+                document.getElementById('content-en').style.display = 'block';
             }
         }
 
-        // Gọi hàm để kiểm tra ngôn ngữ khi trang được tải
+       
         document.addEventListener("DOMContentLoaded", function() {
             checkUserLanguage();
         });
